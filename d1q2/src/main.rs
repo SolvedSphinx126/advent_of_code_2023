@@ -20,7 +20,7 @@ fn main() {
         .into_iter()
         .map_while(Result::ok)
         // duplicate every letter that is both the first and last letter of a digit spelled out to prevent overlaps
-        // dictionary must be adjusted for internal occurances of those words
+        // dictionary must be adjusted for internal occurances of those characters
         .map(|mut line| {
             line = line.replace('e', "ee");
             line = line.replace('o', "oo");
